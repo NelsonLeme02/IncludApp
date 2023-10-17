@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+   background: #346ab1;
+   color: #fff;
+   height: 8rem;
+   /*   position: fixed;
+width: 100%; */
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-weight: bold;
+}
+
+.logo img {
+   height: 130px;
+}
+
+.menu ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+.cabecalho a {
+   text-decoration: none;
+   color: #eee;
+   font-size: 1.3em;
+   padding: 10px 15px;
+}
+
+
+.menu {
+    flex-grow: 10;
+}
+
+.menu li {
+    margin: 0px 10px;
+}
+
+aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho .botao {
+    border-radius: 30px;
+    padding: 15px 40px;
+    margin: 10px;
+}
+
+.botao:hover {
+    background: #fbc01e;
+    color: black;
+}
+
+.menu a:hover  {
+   background-color: #fbc01e;
+   color: #000;
+   border-radius: 30px;
+}
+.red {
+    background: #e51f43;
+    color: #fff;
+}
+
+.foto_perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 4px solid white;
+    margin: 0px 10px;
+}
+
+.foto_perfil:hover {
+    border: 4px solid #fbc01e;
+}
+
+@media (max-width: 680px) {
+    .menu {
+        display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    aside>.red {
+        display: none;
+    }
+}
+
+.Logo{
+    display: flexbox;
+    width:8rem;
+  vertical-align: middle;
+  margin-left: 0.8rem;
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.bodyHome {
+  background-color: #274055;
+  display: flexbox;
+}
+
+.linkToLogin{
+  text-decoration: none;
+  color: white;
+}
+.corpo{
+  width: 100%;
+  height: 30%;
+  background-color: #346ab1;
+  display: flexbox;
+}
+.w100{
+  width:100%
+}
+.w50{
+  width:50%
+}
+.botaoLogin{
+  display: flexbox;
+  width: 25%;
+  margin-right: 2rem;
+  margin-left: calc(100% - 25% - 2rem);
+  margin-top: auto;
+  font-family: 'Ubuntu', sans-serif;
+  background-color:#E51F43;
+  line-height: 2;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.Logo{
+  display: flexbox;
+  width: 12.5%;
+  vertical-align: middle;
+  margin-left: 0.8rem;
+}

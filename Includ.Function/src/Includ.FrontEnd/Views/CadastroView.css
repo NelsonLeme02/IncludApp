@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+.principal {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.titulo {
+  font-size: 3em;
+  margin: 0rem;
+  font-weight: bold;
+}
+
+/* ------------------------------------ */
+
+.principal {
+  margin: 0rem 4.375rem 0rem 4.375rem;
+}
+
+.cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box_form {
+  border: solid 0.1875rem #346ab1;
+  box-shadow: 0.625rem 0.625rem 0.0625rem 0.01875rem #294867;
+  border-radius: 1.875rem;
+  color: #fbc01e;
+  background-color: #346ab1;
+  width: 100%;
+  height: 41.25rem;
+  padding: 1.25rem;
+  margin-top: 8.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr;
+  grid-template-areas: "fotoForm Form"
+}
+
+.fotoForm {
+  grid-area: fotoForm;
+}
+
+.centerFormFoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ------------------------------------ */
+.foto_perfil_cadastro {
+  border: solid 0.1875rem #346ab1;
+  box-shadow: 0.625rem 0.625rem 0.0625rem 0.01875rem #294867;
+  width: 10.625rem;
+  height: 10.625rem;
+  overflow: hidden;
+  border-radius: 6.25rem;
+  margin: 0.9375rem 0rem 0rem 6.875rem;
+  grid-area: fotoETC;
+  
+}
+
+.foto_perfil_cadastro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------------------------------ */
+
+.formlario {
+  grid-area: Form;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem 1fr;
+  grid-template-areas:  " nome nome nome data"
+                        " senha senha confirmacaoSenha confirmacaoSenha"
+                        " email email email email"
+                        " codigoEmail . botaoEmail ."
+                        " telefone telefone IDProfisional IDProfisional"
+                        " codigoTelefone . botaoTelefone ."
+                        " descricao descricao descricao descricao";
+}
+
+.entrada {
+  border-radius: 30px;
+  padding: 5px 15px;
+  margin: 10px;
+  font-size: 14px;
+  background: white;
+  border: solid 2px #fbc01e;
+}
+
+.entrada::placeholder {
+  font-style: italic;
+}
+
+.botao_verify {
+  border-radius: 30px;
+  padding: 0.5rem;
+  margin: 0,625rem;
+  font-size: 1.4em;
+  background: #e51f43;
+  border: solid 0.1875rem #fbc01e;
+  font-weight: bold;
+  color: white;
+  width: 9rem;
+  height: 3rem;
+  /* margin-top: calc((100% - 3rem) / 2); */
+}
+
+.botao_verify:hover {
+  background: #fbc01e;
+  color: black;
+}
+
+/* ------------------------------------ */
+
+.nome {
+  grid-area: nome;
+}
+.data {
+  grid-area: data;
+}
+
+.senha {
+  grid-area: senha;
+}
+
+.confirmacaoSenha {
+  grid-area: confirmacaoSenha;
+}
+
+.email {
+  grid-area: email;
+}
+
+.codigoEmail {
+  grid-area: codigoEmail;
+}
+
+.botaoEmail {
+  grid-area: botaoEmail;
+}
+
+.telefone {
+  grid-area: telefone;
+}
+
+.IDProfisional {
+  grid-area: IDProfisional;
+}
+
+.codigoTelefone {
+  grid-area: codigoTelefone;
+}
+
+.botaoTelefone {
+  grid-area: botaoTelefone;
+}
+
+.botaoTelefone {
+  grid-area: botaoTelefone;
+}
+
+.descricao {
+  grid-area: descricao;
+}

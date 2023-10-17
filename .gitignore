@@ -1,0 +1,7 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/Includ.Application/node_modules
+/Includ.Database/node_modules
+/Includ.Function/node_modules
+/Includ.Services/node_modules

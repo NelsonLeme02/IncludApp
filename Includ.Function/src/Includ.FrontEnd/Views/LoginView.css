@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+.corpoPagina {
+    width: 100%;
+    height: 100%;
+    display: flexbox;
+}
+
+.centered {
+    text-align: center;
+    width: 100%;
+}
+
+.wave {
+    margin-left: -10px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    align-items: center;
+    opacity: 0.4;
+}
+
+.modalLogin {
+    margin-top: calc((100% - 27rem) / 15);
+    margin-left: calc((100% - 21rem) / 2);
+    margin-right: calc((100% - 21rem) / 2);
+    background-color: white;
+    width: 21rem;
+    height: 27rem;
+    border-radius: 5%;
+    display: flexbox;
+    resize: both;
+}
+
+.titulo {
+    padding-top: 20%;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input {
+    text-indent: 3%;
+    font-size: 0.8rem;
+    padding: 2px;
+    width: 70%;
+    line-height: 1.8;
+    text-decoration: none;
+    box-shadow: 0 0 0 0;
+    border: transparent;
+    background-color: #dfdeee;
+    border-radius: 3%;
+}
+
+.divisor {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    width: 85%;
+    border-bottom: 1px solid #dfdeee;
+}
+
+.autologin {
+    width: 100%;
+}
+
+.imgLogo {
+    width: 55%;
+    border-radius: 50%;
+    border: 1px solid #dfdeee;
+}
+
+.realizarLogin {
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: calc((100% - 45%) / 2);
+    margin-right: calc((100% - 45%) / 2);
+    width: 45%;
+    background-color: #166c7e;
+    line-height: 2;
+    border-radius: 5%;
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 4%;
+}
+
+.cadastro {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.7rem;
+    vertical-align: bottom;
+    padding-top: 4%;
+}
+
+.centered-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    table-layout: fixed;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.LinkToCadastro{
+    color: black;
+}

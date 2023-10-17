@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "tarefa-dbConfig",
+      "appliesTo": "Includ.Database/Config/dbConfig.json",
+      "type": "launch"
+    }
+  ]
+}

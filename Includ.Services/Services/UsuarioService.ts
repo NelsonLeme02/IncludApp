@@ -1,7 +1,7 @@
 import { IUsuarioService } from '../Interfaces/IUsuarioService'
 import { IDbConfigService } from '../../Includ.Database/Config/Interface/IDbConfigService'
 import { Usuario } from '../../Includ.Application/Models/UsuarioModel'
-import { Atualizacao } from '../../Includ.Application/Models/AtualizacaoModel'
+import { Atualizacao } from '../../Includ.Application/Models/AtualizacaoUsuarioModel'
 
 export class UsuarioService implements IUsuarioService {
 

@@ -3,7 +3,7 @@ import {ILoginService} from '../../Includ.Services/Interfaces/ILoginService'
 import {IUsuarioService} from '../../Includ.Services/Interfaces/IUsuarioService'
 import {Login} from '../Models/LoginModel'
 import { Usuario } from '../Models/UsuarioModel';
-import { Atualizacao } from '../Models/AtualizacaoModel';
+import { Atualizacao } from '../Models/AtualizacaoUsuarioModel';
 
 export class UsuarioController{
     private readonly _loginService: ILoginService

@@ -14,7 +14,7 @@
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:server": "cd Includ.Application && npm start",
     "start:client": "cd Includ.Function/src && npm start",
-    "build": "concurrently \"npm run build:Application\" \"npm run build:Database\" \"npm run build:Function\" \"npm run build:Services\" \"npm install\"",
+    "build": "concurrently \"npm run build:Application\" \"npm run build:Database\" \"npm run build:Function\" \"npm run build:Services\"",
     "build:Application": "cd Includ.Application && npm install",
     "build:Database": "cd Includ.Database && npm install",
     "build:Function": "cd Includ.Function && npm install",

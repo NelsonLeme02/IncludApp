@@ -2,29 +2,43 @@ import {IdentityType} from '../../Includ.Application/Identity/IdentityType'
 
 export class Usuario{
     Id?: string
-    Nome!: string
-    DataNascimento!: string
-    Email!: string
-    Senha!: string
-    Cep!: string
-    Telefone!: string
+    NomeUsuario!: string
+    CPFUsuario!: string
+    DataNascUsuario!: string
+    EmailUsuario!: string
+    TelefoneUsuario!: string
+    EnderecoUsuario!: string
+    CEPUsuario!: string
+    SenhaUsuario!: string
+    IdEspecialista?: string
+    IdPatologia?: string
     IdTipo?: IdentityType
 
-    constructor(Id: string,
-        Nome: string,
-        DataNascimento: string,
-        Email: string,
-        Senha: string,
-        Cep: string,
-        Telefone: string,
-        IdTipo: IdentityType){
-            this.Id,
-            this.Nome,
-            this.DataNascimento,
-            this.Email,
-            this.Senha,
-            this.Cep,
-            this.Telefone,
+    constructor(
+        Id: string,
+        NomeUsuario: string,
+        CPFUsuario: string,
+        DataNascUsuario: string,
+        EmailUsuario: string,
+        TelefoneUsuario: string,
+        EnderecoUsuario: string,
+        CEPUsuario: string,
+        SenhaUsuario: string,
+        IdEspecialista: string,
+        IdPatologia: string,
+        IdTipo: IdentityType
+        ){
+            this.Id
+            this.NomeUsuario
+            this.CPFUsuario
+            this.DataNascUsuario
+            this.EmailUsuario
+            this.TelefoneUsuario
+            this.EnderecoUsuario
+            this.CEPUsuario
+            this.SenhaUsuario
+            this.IdEspecialista
+            this.IdPatologia
             this.IdTipo
         }
 }

@@ -12,7 +12,7 @@ export class UsuarioService implements IUsuarioService {
     }
 
     async createUsuario(usuario:Usuario) {
-        let query:string = `insert into dbo.Usuario values (newid(), '${usuario.Nome}','${usuario.DataNascimento}', '${usuario.Email}', '${usuario.Senha}', '${usuario.Cep}', '${usuario.Telefone}', '${usuario.IdTipo}')`
+        let query:string = `insert into dbo.Usuario values (newid(), '${usuario.NomeUsuario}','${usuario.CPFUsuario}', '${usuario.DataNascUsuario}', '${usuario.EmailUsuario}', '${usuario.TelefoneUsuario}', '${usuario.EnderecoUsuario}', '${usuario.CEPUsuario}', '${usuario.SenhaUsuario}', '${usuario.IdEspecialista}', '${usuario.IdPatologia}', '${usuario.IdTipo}')`
         let retorno = await this._dbConfig.executarQuery(query)
         return retorno
     }

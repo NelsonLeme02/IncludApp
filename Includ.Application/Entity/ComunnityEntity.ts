@@ -1,14 +1,14 @@
 export class Comunnity {
-    Id! : string 
-    Nome! : string
-    IdAdm! : string
+    Id? : string 
+    NomeComunidade! : string
+    AdmComunidade! : string
     constructor(
         Id:string, 
-        Nome:string, 
-        IdAdm:string        
+        NomeComunidade:string, 
+        AdmComunidade:string        
     ) {
         this.Id
-        this.Nome
-        this.IdAdm
+        this.NomeComunidade
+        this.AdmComunidade
     }
 }

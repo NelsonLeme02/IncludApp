@@ -107,7 +107,7 @@ export class UsuarioController{
 
                 default:
                     res.status(200)
-                    res.json(this._usuarioService.readUsuario(usuario.Email,usuario.Senha))
+                    res.json(this._usuarioService.readUsuario(usuario.EmailUsuario,usuario.SenhaUsuario))
              }
         }
         else{

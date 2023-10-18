@@ -1,29 +1,50 @@
-import React from 'react'
-import './LoginView.css'
-import { Link } from 'react-router-dom'
-import { LoginComponent } from '../Components/LoginComponent'
+import React, { useState } from 'react';
+import './LoginView.css';
+import { Link } from 'react-router-dom';
+import { LoginComponent } from '../Components/LoginComponent';
 
 export default function LoginView() {
-    function fazerLogin(){
-        var Instance = new LoginComponent()
-        Instance.TryLogin()
+    const [user, setUser] = useState('');
+    const [pass, setPass] = useState('');
+
+    function handleUserChange(event) {
+        setUser(event.target.value);
     }
+
+    function handlePassChange(event) {
+        setPass(event.target.value);
+    }
+
+    function fazerLogin() {
+        var Instance = new LoginComponent();
+        Instance.TryLogin(user,pass);
+    }
+
     return (
         <div className="bodyLogin">
             <div className="corpoPagina">
                 <div className="centered">
                     <div className="modalLogin">
                         <p className="titulo">Includ</p>
-                        <input placeholder="Login" type="text" className="input" id="user" />
+            <input
+                placeholder="Login"
+                type="text"
+                className="input"
+                id="user"
+                value={user} // Passamos o valor do estado para o input
+                onChange={handleUserChange} // Função para manipular mudanças no input
+            />
+                                    <br />
                         <br />
-                        <br />
-                        <input
-                            placeholder="Senha"
-                            type="password"
-                            className="input"
-                            id="pass"
-                        />
-                        <br />
+            <input
+                placeholder="Senha"
+                type="password"
+                className="input"
+                id="pass"
+                value={pass} // Passamos o valor do estado para o input
+                onChange={handlePassChange} // Função para manipular mudanças no input
+            />
+            <br />
                         <br />
                         <div className="divisor">&nbsp;</div>
                         <br />
@@ -73,5 +94,6 @@ export default function LoginView() {
                     ></path>
                 </svg>
             </div>
-        </div>)
+        </div>
+    );
 }

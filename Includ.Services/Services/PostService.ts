@@ -12,7 +12,7 @@ export class PostService implements IPostService {
     }
 
     async createPost(Post:Post) {
-        let query:string = `insert into dbo.Post values (newid(), '${Post.Titulo}','${Post.Corpo}', '${Post.Avaliacao}')`
+        let query:string = `insert into dbo.Post values (newid(), '${Post.IdComunidade}','${Post.CorpoPost}', '${Post.AvaliacaoPost}', '${Post.IdImagemPost}', '${Post.Titulo}')`
         let retorno = await this._dbConfig.executarQuery(query)
         return retorno
     }

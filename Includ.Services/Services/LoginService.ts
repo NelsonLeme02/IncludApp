@@ -19,12 +19,16 @@ export class LoginService implements ILoginService{
 
             let usuario: Usuario = new Usuario(
                 objetoUsuario["Id"],
-                objetoUsuario["Nome"],
-                objetoUsuario["DataNascimento"],
-                objetoUsuario["Email"],
-                objetoUsuario["Senha"],
-                objetoUsuario["Cep"],
-                objetoUsuario["Telefone"],
+                objetoUsuario["NomeUsuario"],
+                objetoUsuario["CPFUsuario"],
+                objetoUsuario["DataNascUsuario"],
+                objetoUsuario["EmailUsuario"],
+                objetoUsuario["TelefoneUsuario"],
+                objetoUsuario["EnderecoUsuario"],
+                objetoUsuario["CEPUsuario"],
+                objetoUsuario["SenhaUsuario"],
+                objetoUsuario["IdEspecialista"],
+                objetoUsuario["IdPatologia"],
                 objetoUsuario["IdTipo"]
             );
             return usuario;

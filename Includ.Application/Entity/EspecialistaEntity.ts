@@ -1,4 +1,4 @@
-export class Post {
+export class Especialista {
     Id?: string
     TipoRegistroEspecialista!: string
     RegistroEspecialista!: string

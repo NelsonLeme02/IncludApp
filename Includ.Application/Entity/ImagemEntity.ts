@@ -1,4 +1,4 @@
-export class Patologia {
+export class Imagem {
     Id? : string 
     URLImagem! : string
     constructor(

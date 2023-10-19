@@ -1,13 +1,13 @@
 export class Atualizacao {
-    IdUsuario!: string
+    IdComentario!: string
     NomeDado!: string
     DadoNovo!: string
     constructor(
-        IdUsuario: string,
+        IdComentario: string,
         NomeDado: string,
         DadoNovo: string
     ) {
-        this.IdUsuario = IdUsuario
+        this.IdComentario = IdComentario
         this.NomeDado = NomeDado
         this.DadoNovo = DadoNovo
     }

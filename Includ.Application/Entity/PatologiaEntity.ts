@@ -5,7 +5,7 @@ export class Patologia {
         Id:string, 
         DescPatologia:string    
     ) {
-        this.Id
-        this.DescPatologia
+        this.Id = Id
+        this.DescPatologia = DescPatologia
     }
 }

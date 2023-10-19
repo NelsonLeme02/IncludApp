@@ -5,7 +5,7 @@ export class Patologia {
         Id:string, 
         URLImagem:string    
     ) {
-        this.Id
-        this.URLImagem
+        this.Id = Id
+        this.URLImagem = URLImagem
     }
 }

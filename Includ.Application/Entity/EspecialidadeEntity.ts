@@ -9,9 +9,9 @@ export class Especialidade {
         RegistroEspecialista:string, 
         IdEspecialidade:string   
     ) {
-        this.Id
-        this.TipoRegistroEspecialista
-        this.RegistroEspecialista
-        this.IdEspecialidade
+        this.Id = Id
+        this.TipoRegistroEspecialista = TipoRegistroEspecialista
+        this.RegistroEspecialista = RegistroEspecialista
+        this.IdEspecialidade = IdEspecialidade
     }
 }

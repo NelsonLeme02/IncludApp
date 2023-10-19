@@ -7,8 +7,8 @@ export class Comunnity {
         NomeComunidade:string, 
         AdmComunidade:string        
     ) {
-        this.Id
-        this.NomeComunidade
-        this.AdmComunidade
+        this.Id = Id
+        this.NomeComunidade = NomeComunidade
+        this.AdmComunidade = AdmComunidade
     }
 }

@@ -16,12 +16,12 @@ export class Comentario{
         IdImagemComentario: string,
         IdComunidade: string
         ){
-            this.Id
-            this.IdPost
-            this.AvaliacaoComentario
-            this.VerificacaoComentario
-            this.CorpoComentario
-            this.IdImagemComentario
-            this.IdComunidade
+            this.Id = Id
+            this.IdPost = IdPost
+            this.AvaliacaoComentario = AvaliacaoComentario
+            this.VerificacaoComentario = VerificacaoComentario
+            this.CorpoComentario = CorpoComentario
+            this.IdImagemComentario = IdImagemComentario
+            this.IdComunidade = IdComunidade
         }
 }

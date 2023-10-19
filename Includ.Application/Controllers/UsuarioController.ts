@@ -120,7 +120,7 @@ export class UsuarioController{
             const idUser: string = req.query.username as string;
 
         if (req !== null){
-            
+                
             let deleteUser = await this._usuarioService.deleteUsuario(idUser)
 
             switch(deleteUser){

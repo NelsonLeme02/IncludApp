@@ -7,8 +7,8 @@ export class Atualizacao {
         NomeDado: string,
         DadoNovo: string
     ) {
-        this.IdPost
-        this.NomeDado
-        this.DadoNovo
+        this.IdPost = IdPost
+        this.NomeDado = NomeDado
+        this.DadoNovo = DadoNovo
     }
 }

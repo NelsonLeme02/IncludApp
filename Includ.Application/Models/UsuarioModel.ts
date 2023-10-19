@@ -28,17 +28,17 @@ export class Usuario{
         IdPatologia: string,
         IdTipo: IdentityType
         ){
-            this.Id
-            this.NomeUsuario
-            this.CPFUsuario
-            this.DataNascUsuario
-            this.EmailUsuario
-            this.TelefoneUsuario
-            this.EnderecoUsuario
-            this.CEPUsuario
-            this.SenhaUsuario
-            this.IdEspecialista
-            this.IdPatologia
-            this.IdTipo
+            this.Id = Id
+            this.NomeUsuario = NomeUsuario
+            this.CPFUsuario = CPFUsuario
+            this.DataNascUsuario = DataNascUsuario
+            this.EmailUsuario = EmailUsuario
+            this.TelefoneUsuario = TelefoneUsuario
+            this.EnderecoUsuario = EnderecoUsuario
+            this.CEPUsuario = CEPUsuario
+            this.SenhaUsuario = SenhaUsuario
+            this.IdEspecialista = IdEspecialista
+            this.IdPatologia = IdPatologia
+            this.IdTipo = IdTipo
         }
 }

@@ -13,11 +13,11 @@ export class Post {
         IdImagemPost: string,
         Titulo: string
     ) {
-        this.Id
-        this.IdComunidade
-        this.CorpoPost
-        this.AvaliacaoPost
-        this.IdImagemPost
-        this.Titulo
+        this.Id = Id
+        this.IdComunidade = IdComunidade
+        this.CorpoPost = CorpoPost
+        this.AvaliacaoPost = AvaliacaoPost
+        this.IdImagemPost = IdImagemPost
+        this.Titulo = Titulo
     }
 }

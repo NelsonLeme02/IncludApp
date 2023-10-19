@@ -65,10 +65,16 @@ export class EspecialistaController{
     }
 
     public async criarEspecialista(req: Request, res: Response): Promise<any>{
-        const Especialista: Especialista = new(req.body)
+        const body = req.body
+        let especialista: Especialista = new Especialista(
+            body["Id"],
+            body["TipoRegistroEspecialista"],
+            body["RegistroEspecialista"],
+            body["IdEspecialidade"]
+        );
 
-        if(Especialista !== null){
-             let tryCreate = await this._EspecialistaService.createEspecialista(Especialista)
+        if(especialista !== null){
+             let tryCreate = await this._EspecialistaService.createEspecialista(especialista)
 
              switch(tryCreate){
                 case null:
@@ -77,7 +83,7 @@ export class EspecialistaController{
 
                 default:
                     res.status(200)
-                    res.json(this._EspecialistaService.readEspecialista(Especialista.Id ? Especialista.Id : ''))
+                    res.json(this._EspecialistaService.readEspecialista(especialista.Id ? especialista.Id : ''))
              }
         }
         else{
@@ -109,7 +115,8 @@ export class EspecialistaController{
     }
 
     public async atualizarEspecialista(req: Request, res: Response): Promise<any>{
-        const atualizacao: Atualizacao = new(req.body)
+        const body = req.body
+        const atualizacao: Atualizacao = new(body["IdEspecialista"],body["NomeDado"],body["DadoNovo"])
 
         if(req !== null){
              let atualizar = await this._EspecialistaService.updateEspecialista(atualizacao)

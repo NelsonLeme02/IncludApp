@@ -1,4 +1,5 @@
 import express, { Request, Response, Router } from 'express';
+import { Imagem } from '../Entity/ImagemEntity';
 import {IImagemService} from '../../Includ.Services/Interfaces/IImagemService'
 
 export class ImagemController{
@@ -62,10 +63,14 @@ export class ImagemController{
     }
 
     public async criarImagem(req: Request, res: Response): Promise<any>{
-        const Imagem: Imagem = new(req.body)
+        const body = req.body
+        let imagem: Imagem = new Imagem(
+            body["Id"],
+            body["UrlImagem"]
+        );
 
-        if(Imagem !== null){
-             let tryCreate = await this._ImagemService.createImagem(Imagem)
+        if(imagem !== null){
+             let tryCreate = await this._ImagemService.createImagem(imagem)
 
              switch(tryCreate){
                 case null:
@@ -74,7 +79,7 @@ export class ImagemController{
 
                 default:
                     res.status(200)
-                    res.json(this._ImagemService.readImagem(Imagem.Id ? Imagem.Id : ''))
+                    res.json(this._ImagemService.readImagem(imagem.Id ? imagem.Id : ''))
              }
         }
         else{

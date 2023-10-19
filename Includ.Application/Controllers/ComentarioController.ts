@@ -65,10 +65,19 @@ export class ComentarioController{
     }
 
     public async criarComentario(req: Request, res: Response): Promise<any>{
-        const Comentario: Comentario = new(req.body)
+        const body = req.body
+        let comentario: Comentario = new Comentario(
+            body["Id"],
+            body["IdPost"],
+            body["AvaliacaoComentario"],
+            body["VerificacaoComentario"],
+            body["CorpoComentario"],
+            body["IdImagemComentario"],
+            body["IdComunidade"]
+        );
 
-        if(Comentario !== null){
-             let tryCreate = await this._ComentarioService.createComentario(Comentario)
+        if(comentario !== null){
+             let tryCreate = await this._ComentarioService.createComentario(comentario)
 
              switch(tryCreate){
                 case null:
@@ -77,7 +86,7 @@ export class ComentarioController{
 
                 default:
                     res.status(200)
-                    res.json(this._ComentarioService.readComentario(Comentario.Id ? Comentario.Id : ''))
+                    res.json(this._ComentarioService.readComentario(comentario.Id ? comentario.Id : ''))
              }
         }
         else{
@@ -109,8 +118,9 @@ export class ComentarioController{
     }
 
     public async atualizarComentario(req: Request, res: Response): Promise<any>{
-        const atualizacao: Atualizacao = new(req.body)
-
+        const body = req.body
+        const atualizacao: Atualizacao = new(body["IdComentario"],body["NomeDado"],body["DadoNovo"])
+        
         if(req !== null){
              let atualizar = await this._ComentarioService.updateComentario(atualizacao)
 

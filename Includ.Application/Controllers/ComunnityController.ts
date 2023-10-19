@@ -65,10 +65,15 @@ export class ComunnityController{
     }
 
     public async criarComunnity(req: Request, res: Response): Promise<any>{
-        const Comunnity: Comunnity = new(req.body)
+        const body = req.body
+        let comunnity: Comunnity = new Comunnity(
+            body["Id"],
+            body["NomeComunidade"],
+            body["AdmComunidade"]
+        );
 
-        if(Comunnity !== null){
-             let tryCreate = await this._ComunnityService.createComunnity(Comunnity)
+        if(comunnity !== null){
+             let tryCreate = await this._ComunnityService.createComunnity(comunnity)
 
              switch(tryCreate){
                 case null:
@@ -77,7 +82,7 @@ export class ComunnityController{
 
                 default:
                     res.status(200)
-                    res.json(this._ComunnityService.readComunnity(Comunnity.Id ? Comunnity.Id : ''))
+                    res.json(this._ComunnityService.readComunnity(comunnity.Id ? comunnity.Id : ''))
              }
         }
         else{
@@ -109,7 +114,8 @@ export class ComunnityController{
     }
 
     public async atualizarComunnity(req: Request, res: Response): Promise<any>{
-        const atualizacao: Atualizacao = new(req.body)
+        const body = req.body
+        const atualizacao: Atualizacao = new(body["IdComunnity"],body["NomeDado"],body["DadoNovo"])
 
         if(req !== null){
              let atualizar = await this._ComunnityService.updateComunnity(atualizacao)

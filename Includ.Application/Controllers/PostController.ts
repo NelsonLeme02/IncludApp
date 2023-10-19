@@ -65,10 +65,17 @@ export class PostController{
     }
 
     public async criarPost(req: Request, res: Response): Promise<any>{
-        const Post: Post = new(req.body)
-
-        if(Post !== null){
-             let tryCreate = await this._postService.createPost(Post)
+        const body = req.body
+        let post: Post = new Post(
+            body["Id"],
+            body["IdComunidade"],
+            body["CorpoPost"],
+            body["AvaliacaoPost"],
+            body["IdImagemPost"],
+            body["Titulo"]
+        );
+        if(post !== null){
+             let tryCreate = await this._postService.createPost(post)
 
              switch(tryCreate){
                 case null:
@@ -77,7 +84,7 @@ export class PostController{
 
                 default:
                     res.status(200)
-                    res.json(this._postService.readPost(Post.Id ? Post.Id : ''))
+                    res.json(this._postService.readPost(post.Id ? post.Id : ''))
              }
         }
         else{
@@ -109,7 +116,8 @@ export class PostController{
     }
 
     public async atualizarPost(req: Request, res: Response): Promise<any>{
-        const atualizacao: Atualizacao = new(req.body)
+        const body = req.body
+        const atualizacao: Atualizacao = new(body["IdPost"],body["NomeDado"],body["DadoNovo"])
 
         if(req !== null){
              let atualizar = await this._postService.updatePost(atualizacao)

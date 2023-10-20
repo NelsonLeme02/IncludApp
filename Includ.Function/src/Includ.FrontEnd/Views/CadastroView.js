@@ -1,8 +1,50 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './CadastroView.css';
 import CabecalhoView from './CabecalhoView'
 import Perfil from './Static/Perfil.jpg'
 
 export default function CadastroView() {
+    const [nome, setNome] = useState ('');
+    const [dataNasc, setDataNasc] = useState('');
+    const [pass, setPass] = useState('');
+    const [passConfirm, setPassConfirm] = useState('');
+    const [email, setEmail] = useState('');
+    const [fone, setFone] = useState('');
+    const [bio, setBio] = useState('');
+    const [registro, setRegistro] = useState('');
+    
+    function handleNomeChange(event){
+        setNome(event.target.value);
+    }
+    function handleDataNascChange(event){
+        setDataNasc(event.target.value);
+    }
+    function handlePassChange(event){
+        setPass(event.target.value);
+    }
+    function handlePassConfirmChange(event){
+        setPassConfirm(event.target.value);
+    }
+    function handleEmailChange(event){
+        setEmail(event.target.value);
+    }
+    function handleFoneChange(event){
+        setFone(event.target.value);
+    }
+    function handleBioChange(event){
+        setBio(event.target.value);
+    }
+    function handleRegistroChange(event){
+        setRegistro(event.target.value);
+    }
+
+    /*function fazerCadastro(){
+        var Instance = new UsuarioComponent();
+        Instance.TryCadastro(nome, dataNasc,pass, passConfirm, email,fone, bio, registro)
+    }*/
+
+
     return (
         <div>
             <CabecalhoView />
@@ -17,25 +59,68 @@ export default function CadastroView() {
                                 </div>
                             </div>
                         </form>
-                        <form className="formlario">
-                            <input type="text" placeholder="Nome" className="entrada nome" />
-                            <input type="date" className="entrada data" />
+                        <form className="formulario">
 
-                            <input type="password" placeholder="Senha" className="entrada senha" />
-                            <input type="password" placeholder="Confirmar Senha" className="entrada confirmacaoSenha" />
+                            <input 
+                            placeholder="Nome" 
+                            type="text" 
+                            className="entrada nome"
+                            value={nome}
+                            onChange={handleNomeChange}
+                            />
 
-                            <input type="text" placeholder="E-mail" className="entrada email" />
+                            <input 
+                            type="date" 
+                            className="entrada data" 
+                            value={dataNasc}
+                            onChange={handleDataNascChange}
+                            />
 
-                            <input type="text" placeholder="Codigo E-mail" className="entrada codigoEmail" />
-                            <button className=" botaoEmail botao_verify">Verificar</button>
+                            <input 
+                            type="password" 
+                            placeholder="Senha" 
+                            className="entrada senha" 
+                            value={pass}
+                            onChange={handlePassChange}
+                            />
 
-                            <input type="text" placeholder="Telefone" className="entrada telefone" />
-                            <input type="text" placeholder="Telefone" className="entrada IDProfisional" />
+                            <input 
+                            type="password" 
+                            placeholder="Confirmar Senha" className="entrada confirmacaoSenha"
+                            value={passConfirm} 
+                            onChange={handlePassConfirmChange}
+                            />
 
-                            <input type="text" placeholder="Codigo Telefone" className="entrada codigoTelefone" />
-                            <button className="botaoTelefone botao_verify">Verificar</button>
+                            <input 
+                            type="text" 
+                            placeholder="E-mail" 
+                            className="entrada email" 
+                            value={email}
+                            onChange={handleEmailChange}
+                            />
 
-                            <textarea type="text" placeholder="Descrição do Perfil" className="entrada descricao"></textarea>
+                            <input 
+                            type="text" 
+                            placeholder="Telefone" 
+                            className="entrada telefone" 
+                            value={fone}
+                            onChange={handleFoneChange}
+                            />
+
+                            <input
+                            type="text"
+                            placeholder="CRM / CROP"
+                            className= "entrada registro"
+                            value={registro}
+                            onChange={handleRegistroChange}
+                            />
+
+                            <textarea 
+                            type="text" 
+                            placeholder="Descrição do Perfil" className="entrada descricao"
+                            value={bio}
+                            onChange={handleBioChange}
+                            ></textarea>
                         </form>
                     </section>
                 </div>

@@ -3,32 +3,35 @@ import './ComunidadeView.css';
 import { Link } from 'react-router-dom';
 //import { ComunidadeComponent } from '../Components/ComunidadeComponent';
 import CabecalhoView from './CabecalhoView'
+import Perfil from './Static/Perfil.jpg'
 
 export default function ComunidadeView() {
     return (
-        <div>
+        <div className="bodyComunidade">
             <CabecalhoView />
             <div className="page">
+                <table>
+                    <tr>
+                        <td className="gridSection">
                 <section className="info_perfil">
                     <div className="bloco"></div>
                     <div className="foto_perfil_comunidade">
-                        <img src="Static/Perfil.jpg" alt="perfil comunidade" />
+                        <img src={Perfil} alt="perfil comunidade" />
                     </div>
                     <h2>Nome da comunidade</h2>
                     <i>
                         <p>Nome do criador | 00/00/0000</p>
                     </i>
-                    <br /><br /><br /><br />
+                    
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
                         cupiditate eos voluptate vel pariatur assumenda ipsa, placeat perspiciatis
-                        deserunt sequi voluptates sit tempore dolorum exercitationem dolor ratione
-                        totam. Natus, nobis.
       </p>
                 </section>
-
+                      </td>
+            <td>
                 <div className="feed">
-                    <section className="box">
+                    {/* <section className="box">
                         <div className="post">
                             <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
@@ -66,10 +69,12 @@ export default function ComunidadeView() {
           </p>
                         </div>
                         <div className="post-bar"></div>
-                    </section>
-                </div>
-            </div>
+                    </section> */}
+                        </div>
+                     </td>
+                </tr>
+            </table>
         </div>
-
+    </div>
     )
 }

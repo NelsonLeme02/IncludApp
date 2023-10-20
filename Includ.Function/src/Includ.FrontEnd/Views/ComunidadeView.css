@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
 
-body {
-  margin: 0;
-  font-family: "Ubuntu", sans-serif;
-  background-color: #fff;
-}
-
 .page {
   margin-top: 155px;
   min-height: 100vh;
@@ -19,13 +13,13 @@ body {
 .info_perfil {
   grid-area: perfil;
   list-style: none;
-  border: solid 3px #346ab1;
-  box-shadow: 10px 10px 1px 0.3px #294867;
+  border: solid 5px #166c7e;
+  box-shadow: 12px 12px 1px 0.3px #166c7e;
   border-radius: 30px;
-  color: #fbc01e;
-  background-color: #346ab1;
-  width: 400px;
-  height: 660px;
+  color: #fff;
+  background-color: #274055;
+  width: 300px;
+  height: 550px;
   margin: 40px 60px;
   padding: 20px;
 /*   display: grid;
@@ -36,15 +30,20 @@ body {
   ; */
 }
 
+.gridSection{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 
 .foto_perfil_comunidade {
-  border: solid 3px #346ab1;
-  box-shadow: 10px 10px 1px 0.3px #294867;
-  width: 170px;
-  height: 170px;
+  border: solid 3px #166c7e;
+  width: 40%;
   overflow: hidden;
-  border-radius: 100px;
-  margin: 15px 0px 0px 110px;
+  border-radius: 50%;
+  margin-left: calc(60%/2);
 }
 .foto_perfil_comunidade img {
   width: 100%;

@@ -40,7 +40,7 @@ export default function CadastroView() {
     }
 
     /*function fazerCadastro(){
-        var Instance = new CadastroComponent();
+        var Instance = new UsuarioComponent();
         Instance.TryCadastro(nome, dataNasc,pass, passConfirm, email,fone, bio, registro)
     }*/
 

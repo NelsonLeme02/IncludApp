@@ -7,11 +7,11 @@ export default function LoginView() {
     const [user, setUser] = useState('');
     const [pass, setPass] = useState('');
 
-    function handleUserChange(event) {
+    async function handleUserChange(event) {
         setUser(event.target.value);
     }
 
-    function handlePassChange(event) {
+    async function handlePassChange(event) {
         setPass(event.target.value);
     }
 
@@ -72,7 +72,7 @@ export default function LoginView() {
                                 </tr>
                                 <tr>
                                     <td colSpan="2">
-                                        <button className="realizarLogin" onClick={fazerLogin()}>LOGIN</button>
+                                        <button className="realizarLogin" onClick={fazerLogin}>LOGIN</button>
                                         <div className="cadastro">
                                             Ainda não tem uma conta? <Link className='LinkToCadastro' to='/Cadastro'>Cadastre-se</Link>
                                         </div>

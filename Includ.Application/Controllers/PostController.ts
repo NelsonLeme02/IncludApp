@@ -26,16 +26,16 @@ export class PostController{
 
         if (req !== null){
             
-            let findUser = await this._postService.readPost(IdPost)
+            let findPost = await this._postService.readPost(IdPost)
 
-            switch(findUser){
+            switch(findPost){
                 case null:
                     res.status(400)
                     res.json('Ocorreu um erro ao encontrar o Post')
 
                 default:
                     res.status(200)
-                    res.json(findUser)
+                    res.json(findPost)
             }
             
         }
@@ -47,16 +47,16 @@ export class PostController{
 
         if (req !== null){
             
-            let findUsers = await this._postService.readAllPost()
+            let findPosts = await this._postService.readAllPost()
 
-            switch(findUsers){
+            switch(findPosts){
                 case null:
                     res.status(400)
                     res.json('Ocorreu um erro ao buscar os Posts')
 
                 default:
                     res.status(200)
-                    res.json(findUsers)
+                    res.json(findPosts)
             }
             
         }
@@ -94,20 +94,20 @@ export class PostController{
     }
 
     public async deletarPost(req: Request, res: Response): Promise<any> {
-            const idUser: string = req.query.username as string;
+            const idPost: string = req.query.idPost as string;
 
         if (req !== null){
             
-            let deleteUser = await this._postService.deletePost(idUser)
+            let deletePost = await this._postService.deletePost(idPost)
 
-            switch(deleteUser){
+            switch(deletePost){
                 case null:
                     res.status(400)
                     res.json('Ocorreu um erro ao deletar o Post')
 
                 default:
                     res.status(200)
-                    res.json(deleteUser)
+                    res.json(deletePost)
             }
             
         }

@@ -20,11 +20,11 @@ export class ImagemController{
     }
 
     public async buscarImagem(req: Request, res: Response): Promise<any> {
-        const nomeImagem: string = req.query.NomeImagem as string;
+        const IdImagem: string = req.query.IdImagem as string;
 
         if (req !== null){
             
-            let findImage = await this._ImagemService.readImagem(nomeImagem)
+            let findImage = await this._ImagemService.readImagem(IdImagem)
 
             switch(findImage){
                 case null:

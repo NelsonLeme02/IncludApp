@@ -100,16 +100,16 @@ export class ComentarioController{
 
         if (req !== null){
             
-            let deleteUser = await this._ComentarioService.deleteComentario(idComentario)
+            let deleteComentario = await this._ComentarioService.deleteComentario(idComentario)
 
-            switch(deleteUser){
+            switch(deleteComentario){
                 case null:
                     res.status(400)
                     res.json('Ocorreu um erro ao deletar o Comentario')
 
                 default:
                     res.status(200)
-                    res.json(deleteUser)
+                    res.json(deleteComentario)
             }
             
         }

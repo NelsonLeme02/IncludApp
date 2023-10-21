@@ -1,7 +1,7 @@
-export class UsuarioComponent{
+export class PostComponent{
 
-    async buscarUsuario(email,password){
-        const URL = `http://localhost:4000/Usuario/buscarUsuario?email=${email}&senha=${password}`
+    async buscarPost(IdPost){
+        const URL = `http://localhost:4000/Post/buscarPost?idPost=${IdPost}`
         try {
             const response = await fetch(URL,{
                 method: 'GET',
@@ -17,8 +17,8 @@ export class UsuarioComponent{
         }
     }
 
-    async buscarTodosUsuarios(){
-        const URL = `http://localhost:4000/Usuario/buscarTodosUsuarios`
+    async buscarTodosPosts(){
+        const URL = `http://localhost:4000/Post/buscarTodosPosts`
         try {
             const response = await fetch(URL,{
                 method: 'GET',
@@ -34,22 +34,15 @@ export class UsuarioComponent{
         }
     }
 
-    async criarUsuario(NomeUsuario,CPFUsuario,DataNascUsuario,EmailUsuario,TelefoneUsuario,EnderecoUsuario,CEPUsuario,SenhaUsuario,FlagEspecialista){
-        const URL = `http://localhost:4000/Usuario/criarUsuario`
+    async criarPost(IdComunidade,CorpoPost,AvaliacaoPost,IdImagemPost,Titulo){
+        const URL = `http://localhost:4000/Post/criarPost`
         const data = {
             Id : "",
-            NomeUsuario : NomeUsuario,
-            CPFUsuario : CPFUsuario,
-            DataNascUsuario : DataNascUsuario,
-            EmailUsuario : EmailUsuario,
-            TelefoneUsuario : TelefoneUsuario,
-            EnderecoUsuario : EnderecoUsuario,
-            CEPUsuario : CEPUsuario,
-            SenhaUsuario : SenhaUsuario,
-            IdEspecialista : "",
-            IdPatologia : "",
-            IdTipo : "",
-            FlagEspecialista: FlagEspecialista
+            IdComunidade : IdComunidade,
+            CorpoPost : CorpoPost,
+            AvaliacaoPost : AvaliacaoPost,
+            IdImagemPost : IdImagemPost,
+            Titulo : Titulo
         }
         try {
             const response = await fetch(URL,{
@@ -67,10 +60,10 @@ export class UsuarioComponent{
         }
     }
 
-    async atualizaUsuario(IdUsuario,NomeDado,DadoNovo){
-        const URL = `http://localhost:4000/Usuario/atualizaUsuario`
+    async atualizaPost(IdPost,NomeDado,DadoNovo){
+        const URL = `http://localhost:4000/Post/atualizaPost`
         const data = {
-            IdUsuario : IdUsuario,
+            IdPost : IdPost,
             NomeDado : NomeDado,
             DadoNovo : DadoNovo
         }
@@ -90,8 +83,8 @@ export class UsuarioComponent{
         }
     }
 
-    async deletarUsuario(idUser){
-        const URL = `http://localhost:4000/Usuario/deletarUsuario?idUser=${idUser}`
+    async deletarPost(idPost){
+        const URL = `http://localhost:4000/Post/deletarPost?idPost=${idPost}`
         try {
             const response = await fetch(URL,{
                 method: 'DELETE',

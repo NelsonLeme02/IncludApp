@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function CabecalhoView(){
     return(
-    <div className="bodyCadastro">
+    <div className="bodyCabecalho">
         <header className="cabecalho">
                 <div className="logo">
                     <a href="#inicio">

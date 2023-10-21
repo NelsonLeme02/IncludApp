@@ -17,11 +17,11 @@ export class PatologiaController{
     }
 
     public async buscarPatologia(req: Request, res: Response): Promise<any> {
-        const nomePatologia: string = req.query.NomePatologia as string;
+        const IdPatologia: string = req.query.IdPatologia as string;
 
         if (req !== null){
             
-            let findPatologia = await this._PatologiaService.readPatologia(nomePatologia)
+            let findPatologia = await this._PatologiaService.readPatologia(IdPatologia)
 
             switch(findPatologia){
                 case null:

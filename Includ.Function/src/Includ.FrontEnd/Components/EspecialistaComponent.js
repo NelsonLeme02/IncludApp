@@ -1,7 +1,7 @@
-export class UsuarioComponent{
+export class EspecialistaComponent{
 
-    async buscarUsuario(email,password){
-        const URL = `http://localhost:4000/Usuario/buscarUsuario?email=${email}&senha=${password}`
+    async buscarEspecialista(IdEspecialista){
+        const URL = `http://localhost:4000/Especialista/buscarEspecialista?idEspecialista=${IdEspecialista}`
         try {
             const response = await fetch(URL,{
                 method: 'GET',
@@ -17,8 +17,8 @@ export class UsuarioComponent{
         }
     }
 
-    async buscarTodosUsuarios(){
-        const URL = `http://localhost:4000/Usuario/buscarTodosUsuarios`
+    async buscarTodosEspecialistas(){
+        const URL = `http://localhost:4000/Especialista/buscarTodosEspecialistas`
         try {
             const response = await fetch(URL,{
                 method: 'GET',
@@ -34,22 +34,13 @@ export class UsuarioComponent{
         }
     }
 
-    async criarUsuario(NomeUsuario,CPFUsuario,DataNascUsuario,EmailUsuario,TelefoneUsuario,EnderecoUsuario,CEPUsuario,SenhaUsuario,FlagEspecialista){
-        const URL = `http://localhost:4000/Usuario/criarUsuario`
+    async criarEspecialista(TipoRegistroEspecialista,RegistroEspecialista,IdEspecialidade){
+        const URL = `http://localhost:4000/Especialista/criarEspecialista`
         const data = {
             Id : "",
-            NomeUsuario : NomeUsuario,
-            CPFUsuario : CPFUsuario,
-            DataNascUsuario : DataNascUsuario,
-            EmailUsuario : EmailUsuario,
-            TelefoneUsuario : TelefoneUsuario,
-            EnderecoUsuario : EnderecoUsuario,
-            CEPUsuario : CEPUsuario,
-            SenhaUsuario : SenhaUsuario,
-            IdEspecialista : "",
-            IdPatologia : "",
-            IdTipo : "",
-            FlagEspecialista: FlagEspecialista
+            TipoRegistroEspecialista : TipoRegistroEspecialista,
+            RegistroEspecialista : RegistroEspecialista,
+            IdEspecialidade : IdEspecialidade
         }
         try {
             const response = await fetch(URL,{
@@ -67,10 +58,10 @@ export class UsuarioComponent{
         }
     }
 
-    async atualizaUsuario(IdUsuario,NomeDado,DadoNovo){
-        const URL = `http://localhost:4000/Usuario/atualizaUsuario`
+    async atualizaEspecialista(IdEspecialista,NomeDado,DadoNovo){
+        const URL = `http://localhost:4000/Especialista/atualizaEspecialista`
         const data = {
-            IdUsuario : IdUsuario,
+            IdEspecialista : IdEspecialista,
             NomeDado : NomeDado,
             DadoNovo : DadoNovo
         }
@@ -90,8 +81,8 @@ export class UsuarioComponent{
         }
     }
 
-    async deletarUsuario(idUser){
-        const URL = `http://localhost:4000/Usuario/deletarUsuario?idUser=${idUser}`
+    async deletarEspecialista(idEspecialista){
+        const URL = `http://localhost:4000/Especialista/deletarEspecialista?idEspecialista=${idEspecialista}`
         try {
             const response = await fetch(URL,{
                 method: 'DELETE',

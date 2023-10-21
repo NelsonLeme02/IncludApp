@@ -1,7 +1,7 @@
-export class UsuarioComponent{
+export class ComunnityComponent{
 
-    async buscarUsuario(email,password){
-        const URL = `http://localhost:4000/Usuario/buscarUsuario?email=${email}&senha=${password}`
+    async buscarComunnity(email,password){
+        const URL = `http://localhost:4000/Comunnity/buscarComunnity?email=${email}&senha=${password}`
         try {
             const response = await fetch(URL,{
                 method: 'GET',
@@ -17,8 +17,8 @@ export class UsuarioComponent{
         }
     }
 
-    async buscarTodosUsuarios(){
-        const URL = `http://localhost:4000/Usuario/buscarTodosUsuarios`
+    async buscarTodosComunnitys(){
+        const URL = `http://localhost:4000/Comunnity/buscarTodosComunnitys`
         try {
             const response = await fetch(URL,{
                 method: 'GET',
@@ -34,22 +34,12 @@ export class UsuarioComponent{
         }
     }
 
-    async criarUsuario(NomeUsuario,CPFUsuario,DataNascUsuario,EmailUsuario,TelefoneUsuario,EnderecoUsuario,CEPUsuario,SenhaUsuario,FlagEspecialista){
-        const URL = `http://localhost:4000/Usuario/criarUsuario`
+    async criarComunnity(NomeComunidade,AdmComunidade){
+        const URL = `http://localhost:4000/Comunnity/criarComunnity`
         const data = {
             Id : "",
-            NomeUsuario : NomeUsuario,
-            CPFUsuario : CPFUsuario,
-            DataNascUsuario : DataNascUsuario,
-            EmailUsuario : EmailUsuario,
-            TelefoneUsuario : TelefoneUsuario,
-            EnderecoUsuario : EnderecoUsuario,
-            CEPUsuario : CEPUsuario,
-            SenhaUsuario : SenhaUsuario,
-            IdEspecialista : "",
-            IdPatologia : "",
-            IdTipo : "",
-            FlagEspecialista: FlagEspecialista
+            NomeComunidade : NomeComunidade,
+            AdmComunidade : AdmComunidade
         }
         try {
             const response = await fetch(URL,{
@@ -67,10 +57,10 @@ export class UsuarioComponent{
         }
     }
 
-    async atualizaUsuario(IdUsuario,NomeDado,DadoNovo){
-        const URL = `http://localhost:4000/Usuario/atualizaUsuario`
+    async atualizaComunnity(IdComunnity,NomeDado,DadoNovo){
+        const URL = `http://localhost:4000/Comunnity/atualizaComunnity`
         const data = {
-            IdUsuario : IdUsuario,
+            IdComunnity : IdComunnity,
             NomeDado : NomeDado,
             DadoNovo : DadoNovo
         }
@@ -90,8 +80,8 @@ export class UsuarioComponent{
         }
     }
 
-    async deletarUsuario(idUser){
-        const URL = `http://localhost:4000/Usuario/deletarUsuario?idUser=${idUser}`
+    async deletarComunnity(idUser){
+        const URL = `http://localhost:4000/Comunnity/deletarComunnity?idUser=${idUser}`
         try {
             const response = await fetch(URL,{
                 method: 'DELETE',

@@ -15,8 +15,8 @@ export class PatologiaService implements IPatologiaService {
         return retorno
     }
 
-    async readPatologia(nomePatologia:string) {
-        let query: string = `select * from dbo.Patologia where Id = '${nomePatologia}' for json auto `
+    async readPatologia(IdPatologia:string) {
+        let query: string = `select * from dbo.Patologia where Id = '${IdPatologia}' for json auto `
         let retorno = await this._dbConfig.executarQuery(query)
         return retorno
     }

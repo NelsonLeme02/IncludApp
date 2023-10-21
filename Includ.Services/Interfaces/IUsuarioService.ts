@@ -1,5 +1,5 @@
 import { Usuario } from '../../Includ.Application/Models/UsuarioModel'
-import { Atualizacao } from '../../Includ.Application/Models/AtualizacaoModel'
+import { Atualizacao } from '../../Includ.Application/Models/AtualizacaoUsuarioModel'
 
 export interface IUsuarioService {
     createUsuario(usuario:Usuario): Promise<any>

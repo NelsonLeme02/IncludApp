@@ -1,17 +1,23 @@
 export class Post {
     Id?: string
+    IdComunidade!: string
+    CorpoPost!: string
+    AvaliacaoPost!: string
+    IdImagemPost?: string
     Titulo!: string
-    Corpo!: string
-    Avaliacao!: string
     constructor(
         Id: string,
-        Titulo: string,
-        Corpo: string,
-        Avaliacao: string,
+        IdComunidade: string,
+        CorpoPost: string,
+        AvaliacaoPost: string,
+        IdImagemPost: string,
+        Titulo: string
     ) {
-        this.Id
-        this.Titulo
-        this.Corpo
-        this.Avaliacao
+        this.Id = Id
+        this.IdComunidade = IdComunidade
+        this.CorpoPost = CorpoPost
+        this.AvaliacaoPost = AvaliacaoPost
+        this.IdImagemPost = IdImagemPost
+        this.Titulo = Titulo
     }
 }

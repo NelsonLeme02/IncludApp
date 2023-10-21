@@ -1,21 +1,12 @@
-import $ from 'jquery'
-
 export class LoginComponent {
-    async TryLogin() {
-        const $Email = $('#user')
-        const $Senha = $('#pass')
-        const URL = 'http://localhost:4000/Usuario/fazerLogin'
-        const Data = {
-            Email: $Email,
-            Senha: $Senha
-        }
+    async TryLogin(email,senha) {
+        const URL = `http://localhost:4000/Usuario/fazerLogin?email=${email}&senha=${senha}`
         try {
             const response = await fetch(URL,{
-                method: 'POST',
+                method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(Data)
             }).then(response => response.json())
 
             var responseBody = await response

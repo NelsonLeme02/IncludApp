@@ -3,7 +3,7 @@ import {ILoginService} from '../../Includ.Services/Interfaces/ILoginService'
 import {IUsuarioService} from '../../Includ.Services/Interfaces/IUsuarioService'
 import {Login} from '../Models/LoginModel'
 import { Usuario } from '../Models/UsuarioModel';
-import { Atualizacao } from '../Models/AtualizacaoModel';
+import { Atualizacao } from '../Models/AtualizacaoUsuarioModel';
 
 export class UsuarioController{
     private readonly _loginService: ILoginService
@@ -75,8 +75,7 @@ export class UsuarioController{
 
     public async buscarTodosUsuarios(req: Request, res: Response): Promise<any> {
 
-        if (req !== null){
-            
+
             let findUsers = await this._usuarioService.readAllUsuario()
 
             switch(findUsers){
@@ -88,14 +87,27 @@ export class UsuarioController{
                     res.status(200)
                     res.json(findUsers)
             }
-            
-        }
+
 
         res.status(500)
     }
 
     public async criarUsuario(req: Request, res: Response): Promise<any>{
-        const usuario: Usuario = new(req.body)
+        const body = req.body
+        let usuario: Usuario = new Usuario(
+            body["Id"],
+            body["NomeUsuario"],
+            body["CPFUsuario"],
+            body["DataNascUsuario"],
+            body["EmailUsuario"],
+            body["TelefoneUsuario"],
+            body["EnderecoUsuario"],
+            body["CEPUsuario"],
+            body["SenhaUsuario"],
+            body["IdEspecialista"],
+            body["IdPatologia"],
+            body["IdTipo"]
+        );
 
         if(usuario !== null){
              let tryCreate = await this._usuarioService.createUsuario(usuario)
@@ -107,7 +119,7 @@ export class UsuarioController{
 
                 default:
                     res.status(200)
-                    res.json(this._usuarioService.readUsuario(usuario.Email,usuario.Senha))
+                    res.json(this._usuarioService.readUsuario(usuario.EmailUsuario,usuario.SenhaUsuario))
              }
         }
         else{
@@ -117,10 +129,10 @@ export class UsuarioController{
     }
 
     public async deletarUsuario(req: Request, res: Response): Promise<any> {
-            const idUser: string = req.query.username as string;
+            const idUser: string = req.query.idUser as string;
 
         if (req !== null){
-            
+                
             let deleteUser = await this._usuarioService.deleteUsuario(idUser)
 
             switch(deleteUser){
@@ -139,7 +151,8 @@ export class UsuarioController{
     }
 
     public async atualizarUsuario(req: Request, res: Response): Promise<any>{
-        const atualizacao: Atualizacao = new(req.body)
+        const body = req.body
+        const atualizacao: Atualizacao = new(body["IdUsuario"],body["NomeDado"],body["DadoNovo"])
 
         if(req !== null){
              let atualizar = await this._usuarioService.updateUsuario(atualizacao)

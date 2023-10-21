@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+ .page {
+    margin-top: 100px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 560px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "perfil feed";
+  }
+
+  .info_perfil {
+    grid-area: perfil;
+    list-style: none;
+    border: solid 5px #166c7e;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #274055;
+    /* box-shadow: 12px 12px 1px 0.3px #166c7e; */
+    width: 300px;
+    height: 550px;
+    margin: 40px 60px;
+    padding: 20px;
+  }
+  
+  .foto_perfil_Perfil {
+    border: solid 3px #166c7e;
+    width: 40%;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: calc(60%/2);
+  }
+  .foto_perfil_Perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  main {
+    grid-area: feed;
+  }
+  
+  /* .post {
+    border: solid 3px #346ab1;
+    box-shadow: 10px 10px 1px 0.3px #294867;
+    border-radius: 30px;
+    color: #fbc01e;
+    background-color: #346ab1;
+    width: 960px;
+    height: 500px;
+    margin: 40px 158px 27px 158px;
+    padding: 20px;
+  } */
+  
+  /* .post-bar {
+    border-bottom: solid 3px #fbc01e;
+    border-radius: 10px;
+    width: 996px;
+    height: 55px;
+    margin: 7px 158px 40px 158px;
+    padding: 0px 10px;
+  } */
+
+   

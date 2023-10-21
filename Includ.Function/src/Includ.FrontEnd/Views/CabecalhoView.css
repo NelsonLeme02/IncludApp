@@ -3,9 +3,9 @@
 
 /* ---------- Cabeçalho ---------- */
 .cabecalho {
-   background: #346ab1;
+   background: #166c7e;
    color: #fff;
-   height: 8rem;
+   height: 6rem;
    /*   position: fixed;
 width: 100%; */
    position: fixed;
@@ -19,7 +19,8 @@ width: 100%; */
 }
 
 .logo img {
-   height: 130px;
+   height: 75px;
+   width: 90px;    
 }
 
 .menu ul {
@@ -53,7 +54,7 @@ aside {
 
 .cabecalho .botao {
     border-radius: 30px;
-    padding: 15px 40px;
+    padding: 15px 30px;
     margin: 10px;
 }
 
@@ -67,10 +68,10 @@ aside {
    color: #000;
    border-radius: 30px;
 }
-.red {
+/*.red {
     background: #e51f43;
     color: #fff;
-}
+}*/
 
 .foto_perfil {
     width: 50px;

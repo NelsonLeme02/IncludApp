@@ -16,6 +16,7 @@ export class PostController{
     private initializeRoutes() {
         this.router.get('/buscarPost', this.buscarPost.bind(this));
         this.router.get('/buscarTodosPosts', this.buscarTodosPosts.bind(this));
+        this.router.get('/buscarTodosPostsFeed', this.buscarTodosPostsFeed.bind(this));
         this.router.post('/criarPost', this.criarPost.bind(this));
         this.router.put('/atualizaPost', this.atualizarPost.bind(this));
         this.router.delete('/deletarPost', this.deletarPost.bind(this));
@@ -48,6 +49,28 @@ export class PostController{
         if (req !== null){
             
             let findPosts = await this._postService.readAllPost()
+
+            switch(findPosts){
+                case null:
+                    res.status(400)
+                    res.json('Ocorreu um erro ao buscar os Posts')
+
+                default:
+                    res.status(200)
+                    res.json(findPosts)
+            }
+            
+        }
+
+        res.status(500)
+    }
+
+    public async buscarTodosPostsFeed(req: Request, res: Response): Promise<any> {
+        let count: any = req.query.count as string;
+        count = parseInt(count)
+        if (req !== null){
+            
+            let findPosts = await this._postService.readAllPostToFeed(count)
 
             switch(findPosts){
                 case null:

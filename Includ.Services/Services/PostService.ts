@@ -23,6 +23,13 @@ export class PostService implements IPostService {
         return retorno
     }
 
+    async readAllPostToFeed(count: number) {
+        let query: string = `select top 50 * from dbo.Post offset ${count} for json auto `
+        let retorno = await this._dbConfig.executarQuery(query)
+        return retorno
+    }
+
+
     async readPost(IdPost:string) {
         let query: string = `select * from dbo.Post where Id = '${IdPost}' for json auto `
         let retorno = await this._dbConfig.executarQuery(query)

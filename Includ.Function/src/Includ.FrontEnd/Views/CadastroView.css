@@ -47,3 +47,22 @@
 .gridFlag{
   margin-left: 10%;
 }
+
+.realizarCadastro {
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: calc(100% / 1.2);
+  margin-right: calc((100% - 99%) / 2);
+  width: 10%;
+  background-color: white;
+  line-height: 2;
+  border-radius: 5%;
+  color: #166c7e;
+  font-size: 0.8rem;
+  margin-top: 4%;
+  font-weight: bold
+}
+
+.textoBranco{
+  color: white;
+  font-weight: bold
+}

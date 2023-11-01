@@ -56,18 +56,18 @@ export default function CadastroView() {
         <div className='bodyCadastro'>
             <CabecalhoView />
             <div className='principal'>
-                <div>Perfil</div>
+                <div className='textoBranco'>Perfil</div>
                 <table className='modalCadastro'>
                     <tbody>
                         <tr>
-                            <td rowspan="1" className='w30'>Foto de Perfil</td>
-                            <td className='w70'>Dados</td>
+                            <td rowspan="1" className='w30 textoBranco textoBranco'>Foto de Perfil</td>
+                            <td className='w70 textoBranco'>Dados</td>
                         </tr>
-                        <tr>                                <td rowspan="8" className='w30'>imagem</td>
+                        <tr>                                <td rowspan="8" className='w30 textoBranco'>imagem</td>
                             <td className='w70'><input className='input' id='NomeUsuario' onChange={handleNomeChange}
                                 type='text'
                                 placeholder='Nome...' /></td></tr>
-                        <tr><td className='w70'><input className='input' id='CPFUsuario' onChange={handleCPFUsuarioChange}
+                        <tr><td className='w70'><input className='input' id='CPFUsuario' maxlength="11" onChange={handleCPFUsuarioChange}
                             type='text'
                             placeholder='CPF...' /></td></tr>
                         <tr><td className='w70'><input className='input'
@@ -87,7 +87,7 @@ export default function CadastroView() {
                             type='text'
                             placeholder='CEP...' /></td></tr>
                         <tr><td className='w70'>
-                            <div className='gridFlag'>                                                              <span className='flag'>
+                            <div className='gridFlag textoBranco'>                                                              <span className='flag'>
                                 Especialista</span>
                                 <Switch
                                     onChange={handleEspecialistaChange}
@@ -102,10 +102,11 @@ export default function CadastroView() {
                                     width={48}
                                     className="alignFlag react-switch"
                                 />
-                                <span className='flag'>PCD</span></div>
+                                <span className='flag textoBranco'>PCD</span></div>
                         </td></tr>
                     </tbody>
                 </table>
+                <button className="realizarCadastro" onClick={fazerCadastro}>Fazer Cadastro</button>
             </div>
         </div>
     );

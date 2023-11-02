@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './CadastroView.css';
+import './CriarComunidade.css';
 import CabecalhoView from './CabecalhoView'
 import Perfil from './Static/Perfil.jpg'
 import Switch from "react-switch";

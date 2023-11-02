@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+.principal {
+  font-family: "Ubuntu", sans-serif;
+  width:95%;
+  margin-left: 2.5%;
+  margin-top: 6.8rem;
+  background: #166c7e;
+  border-radius: 10px;
+  height: 32rem
+}
+
+.titulo {
+  font-size: 3em;
+  margin: 0rem;
+  font-weight: bold;
+}
+
+/* ------------------------------------ */
+
+.modalCadastro{
+  width:100%;
+}
+.w30{
+  width:30%;
+}
+.w70{
+  width:70%
+}
+.input{
+  width:80%;
+  margin-top: 5px;
+  margin-left: 10%;
+  border-radius: 5px;
+  line-height: 2;
+  text-indent: 2%;
+}
+.flag{
+  margin-top: 5px;
+  vertical-align: top;
+  padding: 5px;
+}
+.alignFlag{
+   vertical-align: bottom
+}
+.gridFlag{
+  margin-left: 10%;
+}
+
+.realizarCadastro {
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: calc(100% / 1.2);
+  margin-right: calc((100% - 99%) / 2);
+  width: 10%;
+  background-color: white;
+  line-height: 2;
+  border-radius: 5%;
+  color: #166c7e;
+  font-size: 0.8rem;
+  margin-top: 4%;
+  font-weight: bold
+}
+
+.textoBranco{
+  color: white;
+  font-weight: bold
+}
